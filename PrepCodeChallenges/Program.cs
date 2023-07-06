@@ -5,58 +5,26 @@ class Program
 {
     static void Main(string[] args)
     {
-        static void PrepChallenge1()
+        static void PrepChallenge2()
         {
             int play = 0;
             do
             {
 
-                Console.WriteLine("Code Challenge 1");
-                Console.WriteLine("Choose 5 numbers between 1 & 10");
-                int[] nums = new int[5];
-                try
+                Console.WriteLine("Enter a year");
+                int year = Convert.ToInt32(Console.ReadLine());
+                if (year % 4 == 0 || (year % 100 == 0 && year % 400 == 0))
                 {
-                    for (int i = 0; i < nums.Length; i++)
-                    {
-                        nums[i] = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("This is a leap year");
+                }
+                else
+                {
+                    Console.WriteLine("This is not a leap year");
+                }
 
-                    }
-                    Console.WriteLine("Your Array is: ");
-                    for (int i = 0; i < nums.Length; i++)
-                    {
-                        Console.Write(nums[i] + " ");
-                    }
-                    Console.WriteLine();
-                    Console.WriteLine("Choose a numder from the array, pls");
-                    int choice = Convert.ToInt32(Console.ReadLine());
-                    int score = 0;
-                    if (!nums.Contains(choice))
-                    {
-                        Console.WriteLine("Your Score is: " + 0);
-                    }
-                    else
-                    {
-                        foreach (int num in nums)
-                        {
-                            if (num == choice)
-                            {
-                                score += num;
-                            }
-                        }
-                        Console.WriteLine("Your score is:" + score);
-                    }
-                }
-                catch (Exception err)
-                {
-                    Console.WriteLine("We Goofed");
-                    Console.WriteLine(err.ToString());
-                }
-                finally
-                {
-                    Console.WriteLine("The Game is Over");
-                }
             } while (play == 0);
+
         }
-        PrepChallenge1();
+            PrepChallenge2();
     }
 }
