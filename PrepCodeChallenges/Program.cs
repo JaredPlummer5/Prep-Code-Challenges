@@ -5,26 +5,46 @@ class Program
 {
     static void Main(string[] args)
     {
-        static void PrepChallenge2()
+        static void PrepChallenge3()
         {
             int play = 0;
             do
             {
 
-                Console.WriteLine("Enter a year");
-                int year = Convert.ToInt32(Console.ReadLine());
-                if (year % 4 == 0 || (year % 100 == 0 && year % 400 == 0))
+                Console.WriteLine("Enter 5 numbers");
+                int[] numbers = new int[3];
+                int sum = 0;
+                int product = 1;
+                for (int i = 0; i < numbers.Length; i++)
                 {
-                    Console.WriteLine("This is a leap year");
+                    int userInput = Convert.ToInt32(Console.ReadLine());
+
+                    if (userInput >= 0)
+                    {
+                        numbers[i] = userInput;
+                        sum += numbers[i];
+                        product *= numbers[i];
+
+                    }
+                    Console.WriteLine(product);
+
+
+                }
+                if (sum == product)
+                {
+                    Console.WriteLine("Perfect Sequence Detected");
                 }
                 else
                 {
-                    Console.WriteLine("This is not a leap year");
+                    Console.WriteLine("Perfect Sequence Not found");
+                    Console.WriteLine(product);
                 }
+
 
             } while (play == 0);
 
         }
-            PrepChallenge2();
+        PrepChallenge3();
+
     }
 }
