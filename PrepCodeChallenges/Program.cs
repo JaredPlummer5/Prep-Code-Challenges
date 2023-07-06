@@ -19,18 +19,6 @@ class Program
                     for (int i = 0; i < nums.Length; i++)
                     {
                         nums[i] = Convert.ToInt32(Console.ReadLine());
-                        //while (!(nums[i] > 0 && nums[i] <= 10))
-                        //{
-                          
-
-                          
-                        //    Console.WriteLine("Try again");
-
-                            
-
-                        //}
-
-
 
                     }
                     Console.WriteLine("Your Array is: ");
