@@ -26,8 +26,6 @@ class Program
                         product *= numbers[i];
 
                     }
-                    Console.WriteLine(product);
-
 
                 }
                 if (sum == product)
